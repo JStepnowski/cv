@@ -3,11 +3,7 @@ import Router from './routes/Router';
 const App = () => {
   console.log('sranie');
 
-  return (
-    <div>
-      <Router />
-    </div>
-  );
+  return <Router />;
 };
 
 export default App;
