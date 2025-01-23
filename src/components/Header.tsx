@@ -16,35 +16,47 @@ const Header = () => {
   useEffect(() => {
     const body = document.body;
 
+    // Zastosowanie trybu ciemnego lub jasnego na całej stronie
     if (isDarkMode) {
-      body.classList.toggle('dark');
+      body.classList.add('dark');
+      body.classList.remove('light');
     } else {
-      body.classList.toggle('dark');
+      body.classList.add('light');
+      body.classList.remove('dark');
     }
   }, [isDarkMode]);
 
-  // TU KURWA WSZYSTKO
   return (
-    <header className='relative w-full py-6 px-4 bg-gradient-to-r from-violet-700 to-purple-800 dark:from-violet-950 dark:to-purple-900 justify-between flex items-center shadow-md rounded-b-lg'>
-      <div className='flex gap-4 hover:cursor-pointer font-semibold '>
-        <button className='home  hover:scale-125' onClick={() => navigate('/homepage')}>
-          {!isDarkMode && <Icon icon={homeSharp} color='white' classCss='w-6 h-6' />}
-          {isDarkMode && <Icon icon={homeSharp} color='white' classCss='w-6 h-6' />}
+    <header className='relative w-full py-6 px-4 bg-gradient-to-r from-primary to-secondary dark:from-primary dark:to-secondary flex items-center justify-between shadow-md '>
+      <div className='flex gap-4 hover:cursor-pointer font-semibold text-primary-foreground'>
+        <button className='home hover:scale-125' onClick={() => navigate('/')}>
+          <Icon icon={homeSharp} color='white' classCss='w-6 h-6' />
         </button>
 
         <button
-          className={`portfolio text-white px-4 py-2 rounded-lg transition-all duration-300 
-            bg-transparent hover:bg-purple-600 dark:hover:bg-purple-700`}
+          className='portfolio text-primary-foreground px-4 py-2 rounded-lg transition-all duration-300 bg-transparent hover:bg-accent dark:hover:bg-accent-foreground'
           onClick={() => navigate('/portfolio')}
         >
           Portfolio
         </button>
-        <button className='cv hover:scale-125 text-white' onClick={() => navigate('/cv')}>
+
+        <button
+          className='portfolio text-primary-foreground px-4 py-2 rounded-lg transition-all duration-300 bg-transparent hover:bg-accent dark:hover:bg-accent-foreground'
+          onClick={() => navigate('/cv')}
+        >
           CV
         </button>
+
+        <button
+          className='contact text-primary-foreground px-4 py-2 rounded-lg transition-all duration-300 bg-transparent hover:bg-accent dark:hover:bg-accent-foreground'
+          onClick={() => navigate('/contact')}
+        >
+          Contact
+        </button>
       </div>
+
       <div className='flex justify-end hover:scale-125'>
-        <button className='px-6 text-white' onClick={toggleTheme}>
+        <button className='px-6 text-primary-foreground' onClick={toggleTheme}>
           {!isDarkMode && (
             <motion.div
               key='sunny'

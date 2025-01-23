@@ -52,3 +52,7 @@ body {
   --ring: 262 100% 50%;
   --radius: 0.3rem;
 }
+
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
