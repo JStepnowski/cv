@@ -1,13 +1,15 @@
 {
   "files": {
-    "main.css": "/cv/static/css/main.db3235e8.css",
-    "main.js": "/cv/static/js/main.7818ae26.js",
+    "main.css": "/cv/static/css/main.c30287fb.css",
+    "main.js": "/cv/static/js/main.aef191fc.js",
+    "static/media/centrum_medyczne.jpg": "/cv/static/media/centrum_medyczne.969e0ce9d55af7c32e7f.jpg",
+    "static/media/jak_dojechać.jpg": "/cv/static/media/jak_dojechać.1a9c96726daa27489d58.jpg",
     "index.html": "/cv/index.html",
-    "main.db3235e8.css.map": "/cv/static/css/main.db3235e8.css.map",
-    "main.7818ae26.js.map": "/cv/static/js/main.7818ae26.js.map"
+    "main.c30287fb.css.map": "/cv/static/css/main.c30287fb.css.map",
+    "main.aef191fc.js.map": "/cv/static/js/main.aef191fc.js.map"
   },
   "entrypoints": [
-    "static/css/main.db3235e8.css",
-    "static/js/main.7818ae26.js"
+    "static/css/main.c30287fb.css",
+    "static/js/main.aef191fc.js"
   ]
 }
